@@ -3,8 +3,8 @@
 * Olympic Igloo Scoring Class
 *
 * For the Winter Olympics igloo building event there are
-* three judges, each of which gives a score from 0 to 50 
-* (inclusive), but the lowest score is thrown out and the 
+* three judges, each of which gives a score from 0 to 50
+* (inclusive), but the lowest score is thrown out and the
 * competitor's overall score is just the sum of the two
 * highest scores. This class supports the recording of the
 * three judge's scores, and the computing of the competitor's
@@ -37,12 +37,12 @@ public int overallScore()
 {
    int s;
    if (score1 < score2)
-      s = score2;
+      s = score1; // We changed this to score1 because s should be the smallest of the two.
    else
-      s = score1;
+      s = score2; // We changed this to score2 because s should be the smallest of the two.
    if (s > score3)
       s = score3;
-   s = (score1+score2+score3) - s;   
+   s = (score1+score2+score3) - s;
    return s;
 }
 
@@ -68,4 +68,3 @@ public static void main(String args[])
 }
 
 } // end class
-

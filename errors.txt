@@ -1,0 +1,9 @@
+IglooScore1 Errors:
+  - Lines 40 and 42 Needed to be swapped. S should always be set to the lower of the values.
+
+IglooScore2 Errors:
+  - Lines 49 and 50 shouldn't be set to 99, since all three are the same just add two of them.
+  - Line 44 needs to be set to score3 as score2 is the lowest in that scenario.
+
+Testing Coverage Note on IglooScore2:
+  - Line 59 its impossible to get a true | true scenario branch condition on that or condition. The arguments cant be both null and have a length to evaluate where it does not equal 3. I try an approach to split the if statement into 2 if statements, but was not able to pass a NULL as the argument array. The best I can do was to pass no array arguments at all, but the code was still not hit. So I left the code as it was originally written.
